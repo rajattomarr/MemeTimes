@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/memeimageview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTint="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/ShareBtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/memeimageview"
+        app:layout_constraintLeft_toLeftOf="@id/memeimageview"
+        app:layout_constraintBottom_toBottomOf="@id/memeimageview"
+        app:layout_constraintRight_toRightOf="@id/memeimageview"/>
+    <Button
+        android:onClick="Sharememe"
+        android:layout_margin="4dp"
+        android:id="@+id/ShareBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="32dp"
+        android:text="SHARE"
+        android:textColor="@color/black"
+        android:backgroundTint="#808080"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/guideline2"/>
+
+    <Button
+        android:onClick="nextmeme"
+        android:id="@+id/NextBtn"
+        android:layout_margin="4dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="NEXT"
+        android:padding="32dp"
+       android:textColor="@color/black"
+        android:backgroundTint="#808080"
+        app:layout_constraintLeft_toRightOf="@id/guideline2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+     app:layout_constraintGuide_percent="0.5" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
